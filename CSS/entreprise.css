@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1 {
+    padding: 40px 80px;
+}
+.section-lki {
+    padding: 40px 80px;
+} 
+
+.section-m1 {
+    margin: 40px 0;
+}
+body #header {
+    width: 100%;
+    
+}
+
+body {
+    width: 100%;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.244);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3 ease;
+}
+
+#navbar li a:hover, 
+#navbar li a.active {
+    color: rgb(192, 29, 29);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(192, 29, 29);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.card{  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 400px; 
+    margin: 100px auto; 
+    background-color: #E3E6F3;
+    
+}
+
+.card h2{
+  margin-bottom: 10px;
+}
+
+.card a.fp{
+  width: 100%;
+  display: flex;
+  color: rgb(192, 29, 29);
+  text-decoration: none;
+}
+
+.login_register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgb(192, 29, 29);
+    background-color: red;
+    margin: 20px 0;
+  }
+  
+  .login_register a{
+    font-size: 1em;
+    padding: 10px 55px;
+    border: none;
+    width: 50%;
+    text-decoration: none;
+    margin: 0 90px;
+  }
+
+  .login_register a.login{
+  
+    background-color: transparent;
+    color: black;
+  }
+  
+  .login_register a.register{
+    border-radius: 15px;
+    background: linear-gradient(90deg, #003A74, #006AD5);
+    color: white;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form input{
+    padding: 10px;
+    border: 1px solid #DDDDDD;
+    
+    font-family: "Roboto Mono", sans-serif;
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+  }
+
+  .form textarea {
+    padding: 10px;
+    border: 1px solid #DDDDDD;
+    
+    font-family: "Roboto Mono", sans-serif;
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+  }
+
+  .form input.email{
+    margin-bottom: 15px;
+  }
+  
+  .form input.pass{
+    margin-bottom: 15px;
+  }
+  
+
+  .form input.nom{
+    margin-bottom: 15px;
+  }
+  .form input.domaine{
+    margin-bottom: 15px;
+  }
+  .form input.representant{
+    margin-bottom: 15px;
+  }
+
+  .form textarea {
+    margin-top: 15px;
+  }
+
+  .form input.societe {
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    background-color: #003A74;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: rgb(221, 182, 83);
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .9);
+    cursor: pointer;
+  }
+

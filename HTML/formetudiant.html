@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-yHJ3REdZT8IvMU2r+oy6T7GO3S/D3vIZtXnYAnZjvZaA8bmG5txa2PyR9LM1R+wS" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-iKsHBGBiJ4mMbFDtv3kWlBTv58/KG1ZGcfXAZy0klGBb3mzhE7H6gTTPf+tcJvP2Qmm0PMiGKDBwQhR7I+VzPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../CSS/formetudiant.css">
+    <title> Formulaire étudiant </title>
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            text-align: center;
+        }
+
+        .modal-content button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"> <img src="../Images/esprit.png" class="logo" alt=""> </a>
+        <div>
+            <ul id="navbar">
+                <li> <a class="active" href="../HTML/accueil.html"> Accueil </a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn"> Espaces <i class="fa fa-caret-down"></i> </a>
+                    <div class="dropdown-content">
+                        <a href="../HTML/login.html">Espace étudiant(e)</a>
+                        <a href="../HTML/login1.html">Espace Encadrant(e)</a>
+                        <a href="../HTML/administration.html">Administration </a>
+                    </div>
+                </li>
+                <li> <a href="../HTML/stages.html"> Stages </a></li>
+                
+                
+                <li> <a href="../HTML/contact.html"> Contact </a></li>
+                
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="card">
+        <h3>Déposer une demande </h3>
+
+        
+        <div class="login_register">
+            
+            
+        </div>
+
+        
+        <form class="form" action="demande.php" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="identifiant" name="identifiant" class="identifiant" required>
+            <input type="text" placeholder="Nom " name="Nom" class="nom" required>
+            <input type="text" placeholder="Prenom"  name="Prenom" class="prenom" required>
+            <input type="email" placeholder="Adresse mail" name ="Mail" class="email" required>
+            <input type="text" placeholder="Spécialité" name="Spec"  class="email" required>
+            <input type="text" placeholder="Nom de la société" name="NomSociete" class="societe" required>
+            <input type="text" placeholder="Sujet" name="Sujet" class="sujet" required>
+            <textarea cols="10" rows="5" placeholder="Description du sujet" name="Desc" required></textarea>
+            <button type="submit"> Envoyer </button>
+        </form>
+
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h3>Votre demande a été envoyée avec succès!</h3>
+                <button onclick="window.location.href='../HTML/accueil.html'">OK</button>
+            </div>
+        </div>
+            
+    </div>
+
+    <script>
+        document.querySelector('.form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (this.checkValidity()) {
+                document.getElementById('myModal').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
